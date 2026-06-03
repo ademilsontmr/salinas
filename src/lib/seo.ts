@@ -104,7 +104,7 @@ export function getHomeHeadMeta(faqItems: { q: string; a: string }[]) {
       {
         name: "keywords",
         content:
-          "cassino Salinas, cassiem Alagoas, domínio premium à venda, comprar domínio, cassinodesalinas.com.br, turismo salinas, hotelaria, resorts, regulação cassinos brasil, entretenimento regulado",
+          "cassino Salinas, cassino Alagoas, domínio premium à venda, comprar domínio, cassinodesalinas.com.br, turismo salinas, hotelaria, resorts, regulação cassinos brasil, entretenimento regulado",
       },
       { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" },
       { name: "author", content: "Cassino de Salinas" },

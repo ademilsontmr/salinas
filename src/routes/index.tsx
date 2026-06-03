@@ -17,6 +17,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 
+import { DomainHero } from "@/components/domain-hero";
 import { SiteFooter, SiteHeader } from "@/components/site-chrome";
 import { getSortedBlogPosts } from "@/lib/blog-posts";
 import { getHomeHeadMeta } from "@/lib/seo";

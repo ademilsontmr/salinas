@@ -40,15 +40,16 @@ async function main() {
     console.log(`  ${route} → ${outputPath.replace(root + "/", "")}`);
   }
 
-  // Exclui todas as rotas do Worker — HTML e assets servidos estaticamente no edge.
+  // Cloudflare exige ao menos 1 regra include. include/exclude em "/" desativa o Worker
+  // para todo tráfego real (exclude tem prioridade; demais rotas não batem no include).
   const routesJson = {
     version: 1,
-    include: [],
-    exclude: ["/*"],
+    include: ["/"],
+    exclude: ["/"],
   };
   writeFileSync(join(dist, "_routes.json"), JSON.stringify(routesJson, null, 2) + "\n", "utf8");
 
-  console.log(`\nPré-renderizadas ${routes.length} páginas. Worker desativado para tráfego normal (_routes.json exclude: /*).`);
+  console.log(`\nPré-renderizadas ${routes.length} páginas. Worker inativo para tráfego normal (_routes.json include/exclude: /).`);
 }
 
 main().catch((error) => {
